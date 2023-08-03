@@ -1,6 +1,4 @@
-# Sprint-after-death
-Make Minecraft not untoggle your sprint after you die
+# Don't Untoggle Sprint!
+Fabric mod to prevent sprint being toggled back off on respawn after a death, given that the player is using toggle sprint. This behaviour was changed in Minecraft 1.20, and it is inconvenient for minigames with lots of death. If your sprint is not set to toggle, it has no impact.
 
-it basically checks if you have sprint on and if you have sprint set to toggle when the game is about to reset your sprint, it resets your sprint and then it makes you sprint again if you had sprint toggled on before the reset happened...
-
-works with immediate respawn
+![image](src/main/resources/assets/dontuntogglesprint/icon.png)
