@@ -1,26 +1,36 @@
 {
-  "schemaVersion": 1,
-  "id": "sprintafterdeath",
-  "version": "${version}",
-  "name": "SprintAfterDeath",
-  "description": "Makes Minecraft not untoggle sprint if you die (and probably at any similar event which would make it untoggle)",
-  "authors": ["SmajloSlovakian"],
-  "contact": {
-    "repo": "https://github.com/SmajloSlovakian/Sprint-after-death/"
-  },
-  "license": "LGPL-3.0",
-  "icon": "assets/sprintafterdeath/icon.png",
-  "environment": "client",
-  "entrypoints": {
-    "client": [
-      "io.github.smajloslovakian.sprintafterdeath.client.SprintAfterDeathClient"
-    ]
-  },
-  "mixins": [
-    "sprintafterdeath.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=${loader_version}",
-    "minecraft": ">=${minecraft_version}"
-  }
+	"schemaVersion": 1,
+	"id": "sprint-after-death",
+	"version": "${version}",
+	"name": "Sprint After Death",
+	"description": "Makes Minecraft not untoggle sprint if you die (and probably at any similar event which would make it untoggle)",
+	"authors": [
+		"SmajloSlovakian"
+	],
+	"contact": {
+		"sources": "https://github.com/SmajloSlovakian/Sprint-after-death/"
+	},
+    "license": "LGPL-3.0",
+	"icon": "assets/sprint-after-death/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.smajloslovakian.sprad.SprintAfterDeath"
+		],
+		"client": [
+			"io.github.smajloslovakian.sprad.SprintAfterDeathClient"
+		]
+	},
+	"mixins": [
+		"sprint-after-death.mixins.json",
+		{
+			"config": "sprint-after-death.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": ">=26.1-",
+		"java": ">=25"
+	}
 }

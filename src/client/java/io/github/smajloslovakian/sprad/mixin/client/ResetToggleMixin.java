@@ -1,4 +1,4 @@
-package io.github.smajloslovakian.sprintafterdeath.mixin;
+package io.github.smajloslovakian.sprad.mixin.client;
 
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
